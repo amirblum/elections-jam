@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     Vector3 TargetPoint;
 
     const int TEXTFILELINECOUNT = 6;
-    bool isTalking;
+    bool _isTalking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -56,13 +56,27 @@ public class EnemyController : MonoBehaviour
         _nva.SetDestination(TargetPoint);
     }
 
-    public void ChangeTalking()
+    public void StartTalking()
     {
-        isTalking = !isTalking;
+        _isTalking = true;
+        _nva.isStopped = true;
+    }
+    public void StopTalking()
+    {
+        _isTalking = false;
+        _nva.isStopped = false;
     }
 
     IEnumerator MoveEnemy()
     {
-        yield return null;
+        while (true)
+        {
+            if (!_isTalking)
+            {
+                RepositionTargetPoint();
+                yield return new WaitForSeconds(10);
+            }
+        }
+
     }
 }

@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _controller;
     private Transform _body;
     private Animator _animator;
+    private bool _canMove = true;
 
     protected void Awake()
     {
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("Enemy"))
         {
-            hit.gameObject.GetComponent<EnemyController>().NewRandomTalk();
+            hit.gameObject.GetComponent<EnemyController>().StartTalking();
 
         }
         else if (hit.gameObject.transform.parent.CompareTag("Goal"))
@@ -39,4 +40,6 @@ public class PlayerController : MonoBehaviour
             MainManager.Instance.WinGame();
         }
     }
+
+
 }

@@ -4,6 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Level
   - Goal
   layers:
   - Default

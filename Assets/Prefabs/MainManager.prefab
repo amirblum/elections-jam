@@ -45,4 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timerText: {fileID: 0}
   _timerAlertColor: {r: 0.7075472, g: 0, b: 0, a: 1}
-  _startingTime: 20
+  _startingTime: 30
+  _winScreen: {fileID: 0}
+  _loseScreen: {fileID: 0}
+  _retryPrompt: {fileID: 0}
+  _retrySeconds: 2
+  _loadingScreen: {fileID: 0}

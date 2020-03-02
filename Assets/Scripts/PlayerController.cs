@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float _walkSpeed;
     [SerializeField] float _gravity = 20f;
 
-    
+
     private bool _isSprinting;
     private Vector3 _moveDirection = Vector3.zero;
 
@@ -26,9 +26,9 @@ public class PlayerController : MonoBehaviour
     protected void Update()
     {
         if (_controller.isGrounded)
-        _isSprinting = Input.GetKey(KeyCode.LeftShift);
+            _isSprinting = Input.GetKey(KeyCode.LeftShift);
 
-        if (_controller.isGrounded) 
+        if (_controller.isGrounded)
         {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             _body.LookAt(transform.position + _moveDirection);
@@ -40,11 +40,11 @@ public class PlayerController : MonoBehaviour
 
         _moveDirection.y -= _gravity * Time.deltaTime;
         if (!CanMove) return;
-            var moveSpeed = _isSprinting ? _walkSpeed * 2f : _walkSpeed;
-            _moveDirection *= moveSpeed;
-         }
+        var moveSpeed = _isSprinting ? _walkSpeed * 2f : _walkSpeed;
+        _moveDirection *= moveSpeed;
 
-         _moveDirection.y -= _gravity * Time.deltaTime;
+
+        _moveDirection.y -= _gravity * Time.deltaTime;
         _controller.Move(_moveDirection * Time.deltaTime);
     }
 

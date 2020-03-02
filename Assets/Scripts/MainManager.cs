@@ -11,6 +11,8 @@ public class MainManager : MonoBehaviour
     [SerializeField] float _startingTime;
     private float _timer;
 
+    private bool _gameWon;
+
     [SerializeField] GameObject _winScreen;
     [SerializeField] GameObject _loseScreen;
     [SerializeField] GameObject _retryPrompt;
@@ -37,7 +39,10 @@ public class MainManager : MonoBehaviour
             yield return null;
         }
 
-        LoseGame();
+        if (!_gameWon)
+        {
+            LoseGame();
+        }
     }
 
     protected void Update()
@@ -52,6 +57,8 @@ public class MainManager : MonoBehaviour
     {
         Debug.Log("You Win!");
         StartCoroutine(EndCoroutine(_winScreen));
+
+        _gameWon = true;
     }
 
     public void LoseGame()

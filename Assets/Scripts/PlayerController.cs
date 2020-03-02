@@ -33,9 +33,6 @@ public class PlayerController : MonoBehaviour
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             _body.LookAt(transform.position + _moveDirection);
             _animator.SetFloat("Speed_f", _moveDirection.magnitude);
-
-            _moveDirection *= _walkSpeed;
-
         }
 
         _moveDirection.y -= _gravity * Time.deltaTime;

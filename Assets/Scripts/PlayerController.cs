@@ -25,6 +25,13 @@ public class PlayerController : MonoBehaviour
 
         moveDirection *= _walkSpeed;
         _controller.Move(moveDirection * Time.deltaTime);
+    }
 
+    protected void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.transform.parent.CompareTag("Goal"))
+        {
+            MainManager.Instance.WinGame();
+        }
     }
 }

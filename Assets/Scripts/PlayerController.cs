@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _walkSpeed;
+    [SerializeField] float _gravity = 20f;
+    
+    private Vector3 _moveDirection = Vector3.zero;
 
     private CharacterController _controller;
     private Transform _body;
@@ -20,12 +23,18 @@ public class PlayerController : MonoBehaviour
 
     protected void Update()
     {
-        var moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        _body.LookAt(transform.position + moveDirection);
-        _animator.SetFloat("Speed_f", moveDirection.magnitude);
+        if (_controller.isGrounded) 
+        {
+            _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            _body.LookAt(transform.position + _moveDirection);
+            _animator.SetFloat("Speed_f", _moveDirection.magnitude);
 
-        moveDirection *= _walkSpeed;
-        _controller.Move(moveDirection * Time.deltaTime);
+            _moveDirection *= _walkSpeed;
+             
+         }
+         
+         _moveDirection.y -= _gravity * Time.deltaTime;
+        _controller.Move(_moveDirection * Time.deltaTime);
     }
 
     protected void OnControllerColliderHit(ControllerColliderHit hit)

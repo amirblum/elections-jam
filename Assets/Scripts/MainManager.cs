@@ -1,18 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Text _timerText;
+    [SerializeField] Color _timerAlertColor;
+    [SerializeField] float _startingTime;
+    private float _timer;
+
+    public static MainManager Instance;
+
+    protected void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    protected IEnumerator Start()
     {
-        
+        for (var timer = _startingTime; timer >= 0; timer -= Time.deltaTime)
+        {
+            _timerText.text = timer.ToString("0.0");
+            if (timer < _startingTime / 4)
+            {
+                _timerText.color = _timerAlertColor;
+            }
+            yield return null;
+        }
+
+        LoseGame();
+    }
+
+    public void WinGame()
+    {
+        Debug.Log("You Win!");
+    }
+
+    public void LoseGame()
+    {
+        Debug.Log("You Lose!");
     }
 }

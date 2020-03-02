@@ -6,13 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float _walkSpeed;
     [SerializeField] float _gravity = 20f;
-    
+
     private Vector3 _moveDirection = Vector3.zero;
 
     private CharacterController _controller;
     private Transform _body;
     private Animator _animator;
-    private bool _canMove = true;
+    public bool CanMove = true;
 
     protected void Awake()
     {
@@ -23,17 +23,18 @@ public class PlayerController : MonoBehaviour
 
     protected void Update()
     {
-        if (_controller.isGrounded) 
+        if (_controller.isGrounded)
         {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             _body.LookAt(transform.position + _moveDirection);
             _animator.SetFloat("Speed_f", _moveDirection.magnitude);
 
             _moveDirection *= _walkSpeed;
-             
-         }
-         
-         _moveDirection.y -= _gravity * Time.deltaTime;
+
+        }
+
+        _moveDirection.y -= _gravity * Time.deltaTime;
+        if (!CanMove) return;
         _controller.Move(_moveDirection * Time.deltaTime);
     }
 
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if (hit.gameObject.CompareTag("Enemy"))
         {
             hit.gameObject.GetComponent<EnemyController>().StartTalking();
+            CanMove = false;
 
         }
         else if (hit.gameObject.transform.parent.CompareTag("Goal"))

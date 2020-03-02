@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     RPGTalk _rpgt;
     NavMeshAgent _nva;
 
+    GameObject Player;
 
     GameObject Level;
 
@@ -19,6 +20,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Player = GameObject.FindWithTag("Player");
         _nva = GetComponent<NavMeshAgent>();
         _rpgt = GetComponentInChildren<RPGTalk>();
         Level = GameObject.FindGameObjectWithTag("Level");
@@ -58,25 +60,24 @@ public class EnemyController : MonoBehaviour
 
     public void StartTalking()
     {
+        transform.LookAt(Player.transform);
         _isTalking = true;
         _nva.isStopped = true;
+        NewRandomTalk();
     }
     public void StopTalking()
     {
         _isTalking = false;
         _nva.isStopped = false;
+        Player.GetComponent<PlayerController>().CanMove = true;
     }
 
     IEnumerator MoveEnemy()
     {
         while (true)
         {
-            if (!_isTalking)
-            {
-                RepositionTargetPoint();
-                yield return new WaitForSeconds(10);
-            }
+            if (!_isTalking) RepositionTargetPoint();
+            yield return new WaitForSeconds(10);
         }
-
     }
 }

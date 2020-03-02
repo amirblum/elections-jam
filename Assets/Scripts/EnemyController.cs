@@ -51,7 +51,7 @@ public class EnemyController : MonoBehaviour
 
     void RepositionTargetPoint()
     {
-        Mesh _lm = Level.GetComponent<MeshFilter>().mesh;
+        var _lm = Level.GetComponent<MeshRenderer>();
         Vector3 _tmp = new Vector3(Random.Range(_lm.bounds.min.x, _lm.bounds.max.x), 0, Random.Range(_lm.bounds.min.z, _lm.bounds.max.z));
         TargetPoint = _tmp;
         _nva.SetDestination(TargetPoint);

@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     Vector3 TargetPoint;
 
-    const int TEXTFILELINECOUNT = 6;
+    const int TEXTFILELINECOUNT = 34;
     bool _isTalking = false;
 
     // Start is called before the first frame update
@@ -23,6 +23,7 @@ public class EnemyController : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
         _nva = GetComponent<NavMeshAgent>();
         _rpgt = GetComponentInChildren<RPGTalk>();
+        _rpgt.callback.AddListener(StopTalking);
         Level = GameObject.FindGameObjectWithTag("Level");
         TargetPoint = new Vector3();
         StartCoroutine(MoveEnemy());
@@ -44,7 +45,7 @@ public class EnemyController : MonoBehaviour
     public void NewRandomTalk()
     {
         int lineStart = Random.Range(1, TEXTFILELINECOUNT);
-        int lineBreak = lineStart + 3;
+        int lineBreak = lineStart + 1;
         _rpgt.NewTalk(lineStart.ToString(), lineBreak.ToString());
     }
 
@@ -54,7 +55,6 @@ public class EnemyController : MonoBehaviour
         print(_lm.bounds.min.x + " " + _lm.bounds.max.x);
         Vector3 _tmp = new Vector3(Random.Range(_lm.bounds.min.x, _lm.bounds.max.x), 0, Random.Range(_lm.bounds.min.z, _lm.bounds.max.z));
         TargetPoint = _tmp;
-        print(TargetPoint);
         _nva.SetDestination(TargetPoint);
     }
 

@@ -1,40 +1,37 @@
-So you like the Quick Start, hum?
-This is it! Just a TXT with all the text, and let us do the rest!
-Although, we have a lot of useful options... Be sure to check the Complex Demo!
-You can aways visit www.seizestudios.com and see the documentation also!
-Follow us on Social Media to see more awesome stuff!
-
-
-
--------- Complex Demo ---------
-*PlayerName*: So... This is RPGTalk, hum? Seems nice. 
-*PlayerName*: I'm already noticing that my face can move while I'm talking... I belive that any Animator can be set, so that open a lot of possibilites...
-*PlayerName*: I Guess I will see what it can do, moving with the arrows.
-*PlayerName*: Oh! There is someone right there! I'll hit "E" next to him to talk.
-
-FunnyGuy: Hey! Did you notice that every option can change in realtime?
-FunnyGuy: By the way... Who are you again?
-*PlayerName*: I'm *PlayerName*. Wait... Does that mean i can use variables?!
-FunnyGuy: Yes you can, *PlayerName*! Easy peasy!
-*PlayerName*: Neat! What else can I do?
-FunnyGuy: Hum... You can have really long texts, and the RPGTalk itself will break it. Something called Word Warp. You can even have insanaly high amount of words! It's pretty cool!
-*PlayerName*: I see! And the text is taken from an external file, isn't that right?
-FunnyGuy: Yes it is! It is awesome to work on dialogs later on, or change just one file for different languages. No extra code needed!
-FunnyGuy: But, for me, the best part is that we can have Callbacks!
-*PlayerName*: Callbacks? Like, when the talk end we call a function in other script?
-FunnyGuy: Exactly! Watch me get rid of that wall...
-FunnyGuy: ****Magic****
-*PlayerName*: Wow! With Callbacks, I can do whatever I want!
-FunnyGuy: You can Indeed! Now go talk to my friend on the other room!
-*PlayerName*: Ok! Thank you!
-
-*PlayerName*:I wonder if a dialog could follow someone or pass itself... Hum...
-
-*PlayerName*: Hi! I'm *PlayerName*!
-Girl: Hi *PlayerName*. I notice that you saw that dialogs can follow objects too. Bacause we use the Unity's Canvas, it can work nice on 3D projects as well.
-Girl: It is no problem to have multiple instances of RPGTalk on the same scene either.
-Girl: The sounds, names, photos, everything is highly customizable.
-*PlayerName*: The code is really simple, too!
-Girl: Yes! But listen to me, I'm going to say something so important that the the Talk will be fixed on the screen, even when you can move again.
-*PlayerName*: *Listen Carefuly*
-Girl: Show your support by following Seize Studios on Social Media. Any doubts, check the documentation at www.seizestudios.com
+﻿.תינומה הדמשהל קשנ ילכמ ישפוח םלוע ןעמל קבאמהמ קלחכ תאזו
+,רוזאב רתויב ןכוסמהו לודגה יניערגה קשנה לנסרא תלעב ,לארשי זוריפל תארוק הנושארבו שארבו
+,תינומה הדמשהל קשנה ילכ לכמו יניערג קשנמ ןוכיתה חרזמה תא זרפל תשרוד המישרה
+.היטרקומדו קדצ ,תוריח ,תואמצעל םימעה תוכזב הכימת העיבמ
+איה .םימעהו תדלומה תוצרא תקולחו לוציפל ,תויתתיכו תויתדע ,תוינתא תוקולחמ תעירזל,לושמו דרפה
+תוינידמל התודגנתה ,םלועהו רוזאה יניינעב תיטסילאינולוקו הרז תוברעתהל התודגנתה תא השיגדמ המישרה
+.תימואלניב המכסה לע ךמתסמה קדוצ םולשלו
+,491 הטלחהל םאתהב הבישה תוכז תא חיטבי רשא םיטילפה תייעבל קדוצ ןורתפ גישהל ,תיחרזמה םילשורי התריבש תיאמצע תיניטסלפ
+הנידמ םיקהל ,םייטילופה םיריסאה לכ תא ררחשל ,תינעזגה הדרפהה רדג תאו תויולחנתהה לכתא קרפל
+,7691 תנשב ושבכנש םיינונבלהו םיירוסה ,םייניטסלפה םיחטשה לכ שוביכל ץק םישל תפאוש תפתושמה המישרה
+פריהזה לארשי קנבו לארשיב תורזה תועקשהה וקספ .םיקחש ועיקרה תיבירה יזוחאו ג"לתהמ
+6% לע דמע יביצקתה ןוערגה ,ג"לתהמ 001%-מ רתויל לפכוהו חפת ימואלה בוחה. 11%
+-ל ועיגה הלטבאה ידמימו לארשי תנידמ לע ורבע ןותימ לש םייתנש .רבשמ לש ומוציעב
+הלשממה המצע האצמ ,תסנכב דוכילה לש החוכ תא וליפכהש תוריחבה רחאל, 3002 תנשב
+.תעכ התוא םיפקותה םירבשמה ינפב רתוי הדימעו
+רתוי הקזח תילארשיה הלכלכה תא ךפה ,הנוטלש תפוקתב ןורחאה רבשמב לופיטב דוכילה
+הטקנש םיצימאה םידעצה ,תאזמ הרתי .םיחטבמ ףוח לא ,םירבשמל תוניב תילארשיה
+הלכלכה תא טוונל ,הבורמ החלצהבו ,הלוכי איה יכ דוכילה תגלפמ החיכוה ,תילבולגה
+הלכלכה תא םיפטוש תואדו יא ילגש ןמזב ,ךכמ בושח תוחפ אל .המוזרב תחלצומ תילכלכ
+המרופר שי והינתנ ןימינב תגהנהב דוכילה תגלפמל ,םירוביד רקיעב םיגיצמ םירחאש ןמזב
+.תוימואלה תוית
+תידימת םילטבומה תצובקל ופרטצה םישנא לש ךלוהו
+לדג רפסמו דרי הדובעה לש הכרע םהב תומוקמב תולתו ינוע לש לגעמ רצונ - ךכמ רומח
+.קוחכ םיסימ
+ומלישו הדובעל ואציש ולא םתוא לע רתוי ףא דיבכהש בצמ .תישדוח תרוכשמ ךותמ םיהובג
+סמ יחתנ תשרפה ינפ לע ,תוהובג הסנכה תחטבאו הלטבא תואבצק לבקל הדובעל םירישכה
+םישנא ופידעה וב בצמה תא ונישו החוורה תכרעמב םייוקילה תא ונקית ףא ולא תומרופר
+.רתוי ביצי סיסב לע תנעשנ
+תיסנניפה תכרעמהו ,תוכומנ תיבירהו היצלפניאה .ןזאתהו טעמכ ביצקתהו הדח הרוצב
+םצמוצ ימואלה בוחה ,יצחב תחפוה םילטבומה רפסמ .תונורחאה םינשה שמחב 5%-ל רבעמ
+ולע הלש לודיגה יזוחאש הנוסחו הביצי תילכלכ תכרעממ לארשי התנהנ ,המרופרהמ האצותכ
+.ילארשיה
+רוביצה לש תונוכסחהמ ישילש ינשכ טעמכ םיריסאכ קיזחהש יאקנבה לופואודה תא תקרפמ
+איהש ךות ,ןוהה קושב םג לפטלדוכילה תלשממ התנפ ,ךילהת לש ופוסב .וטרפוה ,תוליעי
+יתלבכ וחכוהש תובר תויתלשממ תורבחו תויתשתב תיביסאמ העקשה הלחוה .לגר תטישפ
+ינפב הדמעש תכרעמל הכימת ןתמ ידי לע ,םיבר םיחרזא לש היסנפה תואבצק תא הליצהו
+תושעל הלידגה ףא דוכילה תלשממ .תבחרנ הדנ'גאמ קלח קר התיה ,תיביצקתה המרופרה

@@ -8,11 +8,13 @@ public class EnemyController : MonoBehaviour
     RPGTalk _rpgt;
     NavMeshAgent _nva;
 
+
     GameObject Level;
 
     Vector3 TargetPoint;
 
     const int TEXTFILELINECOUNT = 6;
+    bool isTalking;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,7 @@ public class EnemyController : MonoBehaviour
         _rpgt = GetComponentInChildren<RPGTalk>();
         Level = GameObject.FindGameObjectWithTag("Level");
         TargetPoint = new Vector3();
+        StartCoroutine(MoveEnemy());
     }
 
     // Update is called once per frame
@@ -35,12 +38,8 @@ public class EnemyController : MonoBehaviour
             NewRandomTalk();
         }
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        NewRandomTalk();
-    }
 
-    void NewRandomTalk()
+    public void NewRandomTalk()
     {
         int lineStart = Random.Range(1, TEXTFILELINECOUNT);
         int lineBreak = lineStart + 3;
@@ -57,4 +56,13 @@ public class EnemyController : MonoBehaviour
         _nva.SetDestination(TargetPoint);
     }
 
+    public void ChangeTalking()
+    {
+        isTalking = !isTalking;
+    }
+
+    IEnumerator MoveEnemy()
+    {
+        yield return null;
+    }
 }

@@ -29,7 +29,12 @@ public class PlayerController : MonoBehaviour
 
     protected void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.transform.parent.CompareTag("Goal"))
+        if (hit.gameObject.CompareTag("Enemy"))
+        {
+            hit.gameObject.GetComponent<EnemyController>().NewRandomTalk();
+
+        }
+        else if (hit.gameObject.transform.parent.CompareTag("Goal"))
         {
             MainManager.Instance.WinGame();
         }

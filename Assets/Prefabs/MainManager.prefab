@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c0cbffc7c579c644a7a89cb0a1c8105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timerText: {fileID: 0}
+  _timerAlertColor: {r: 0.7075472, g: 0, b: 0, a: 1}
+  _startingTime: 20

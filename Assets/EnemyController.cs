@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
 
     Vector3 TargetPoint;
 
-    const int TEXTFILELINECOUNT = 20;
+    const int TEXTFILELINECOUNT = 6;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +29,10 @@ public class EnemyController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             RepositionTargetPoint();
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            NewRandomTalk();
         }
     }
     private void OnCollisionEnter(Collision collision)

@@ -243,7 +243,7 @@ MonoBehaviour:
   animatorBooleanName: 
   animatorIntName: 
   cutscenePosition: 0
-  textSpeed: 25
+  textSpeed: 50
   currentChar: 0
   variables: []
   shouldUsePhotos: 0
